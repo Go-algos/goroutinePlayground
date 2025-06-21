@@ -8,6 +8,7 @@ import (
 )
 
 func iterate() {
+	// Channels: https://go.dev/doc/effective_go#channels
 	// Create an unbuffered channel
 	c := make(chan string)
 	var wg sync.WaitGroup
