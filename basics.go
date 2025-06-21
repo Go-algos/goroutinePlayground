@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"github.com/google/uuid"
+	"runtime"
 	"sync"
 )
 
@@ -11,12 +12,17 @@ func iterate() {
 	salutations := []string{"Hello", "greetings", "Good day"}
 	for _, salutation := range salutations {
 		wg.Add(1)
-		go func() {
+		// what it should be
+		go func(input *string) {
+			defer wg.Done()
+
 			id := uuid.New().String()
 			fmt.Println("Exec_id:", id)
-			defer wg.Done()
-			fmt.Println(salutation)
-		}()
+			fmt.Println(input)
+			var s runtime.MemStats
+			runtime.ReadMemStats(&s)
+			fmt.Println(s)
+		}(&salutation)
 	}
 
 	wg.Wait()
