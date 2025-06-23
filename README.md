@@ -15,3 +15,12 @@ Output:
 * BenchmarkContextSwitching       13768707                87.07 ns/op
 * PASS
 * ok      command-line-arguments  2.404s
+
+-----------------------------------------------
+== List of concurrency primitives
+
+* WaitGroup
+* Mutex/ RWMutex
+* Once
+* NewCond
+* Pool
