@@ -4,9 +4,11 @@ import "fmt"
 
 func main() {
 	fmt.Println("Goroutine examples")
+	// 5: Once
+	once()
 
 	// 4. New Cond/Mutex
-	nCond()
+	//nCond()
 
 	// 3: Mutex and RWMutex - holds r/w level lock
 	//m()
