@@ -20,6 +20,8 @@ func once() {
 		go func() {
 			defer increments.Done()
 			fmt.Println("Attempt to call once many times $d", i)
+			// This would execute sync primitive once -> anything passed into ~.Do
+			// an attempt to pass other func will be also disregarded
 			once.Do(increment)
 		}()
 	}
