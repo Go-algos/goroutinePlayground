@@ -4,6 +4,12 @@ import "fmt"
 
 func main() {
 	fmt.Println("Goroutine examples")
+
+	// 6. Deadlock
+	//deadlock()
+	// above will cause next error
+	// => fatal error: all goroutines are asleep - deadlock!
+
 	// 5: Once
 	once()
 
