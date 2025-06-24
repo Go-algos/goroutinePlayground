@@ -5,8 +5,11 @@ import "fmt"
 func main() {
 	fmt.Println("Goroutine examples")
 
-	// 7. Pool
-	pool()
+	// 7.2 Pool
+	pool2()
+
+	// 7.1 Pool
+	//pool()
 
 	// 6. Deadlock
 	//deadlock()

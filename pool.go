@@ -6,24 +6,37 @@ import (
 	"sync"
 )
 
-type ArbitraryResource struct {
-	id string
-}
-
-func pool() {
-	myPool := sync.Pool{
+func pool2() {
+	var numCalcsCreated int
+	myPool := &sync.Pool{
 		New: func() interface{} {
-			instance := ArbitraryResource{id: uuid.NewString()}
-			fmt.Println("Create a new instance.", instance)
-			return instance
+			instanceID := uuid.NewString()
+			numCalcsCreated += 1
+			mem := make([]byte, 1024)
+			fmt.Println("Create a new.", instanceID)
+			return &mem
 		},
 	}
 
-	// We are operating with two instances in total
-	myPool.Get()
-	instanceA := myPool.Get()
-	myPool.Put(instanceA)
-	instanceB := myPool.Get()
-	myPool.Put(instanceB)
-	myPool.Get()
+	// Seed the pool with 4kB
+	myPool.Put(myPool.New())
+	myPool.Put(myPool.New())
+	myPool.Put(myPool.New())
+	myPool.Put(myPool.New())
+
+	const numWorkers = 1024 * 1024
+	var wg sync.WaitGroup
+	wg.Add(numWorkers)
+
+	for i := numWorkers; i > 0; i-- {
+		go func() {
+			defer wg.Done()
+			mem := myPool.Get().(*[]byte)
+			defer myPool.Put(mem)
+		}()
+	}
+
+	wg.Wait()
+	fmt.Printf("%d calculation created", numCalcsCreated)
+
 }
