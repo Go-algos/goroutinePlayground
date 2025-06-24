@@ -5,8 +5,13 @@ import "fmt"
 func main() {
 	fmt.Println("Goroutine examples")
 
+	// 9: simple channel
+	simpleChannel()
+
+	// 8: netWorkDemon && pool usage to improve performance
+
 	// 7.2 Pool
-	pool2()
+	//pool2()
 
 	// 7.1 Pool
 	//pool()
