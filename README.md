@@ -28,11 +28,12 @@ Output:
 
 -------------------------------------------------
 
-Benchmark network deamon:
+Benchmark network demon:
 
 go test -run BenchmarkNetworkRequest --benchtime=10s -bench=.
 
-pavel@paradox goroutinePlayground % go test -run BenchmarkNetworkRequest --benchtime=10s -bench=.
+* go test -run BenchmarkNetworkRequest --benchtime=10s -bench=.
+
 Accept connection from 127.0.0.1:50350
 goos: darwin
 goarch: arm64
