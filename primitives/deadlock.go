@@ -1,11 +1,11 @@
-package main
+package primitives
 
 import (
 	"fmt"
 	"sync"
 )
 
-func deadlock() {
+func Deadlock() {
 	var onceA, onceB sync.Once
 
 	var initB func()

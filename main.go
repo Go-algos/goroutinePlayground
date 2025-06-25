@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"goroutinePlayground/demon"
+	"goroutinePlayground/primitives"
 )
 
 func main() {
@@ -23,7 +24,7 @@ func main() {
 	//pool()
 
 	// 6. Deadlock
-	//deadlock()
+	primitives.Deadlock() // on the second attempt after import/refactor: compiles - but deadlock!!
 	// above will cause next error
 	// => fatal error: all goroutines are asleep - deadlock!
 
