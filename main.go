@@ -2,11 +2,14 @@ package main
 
 import (
 	"fmt"
-	"goroutinePlayground/primitives"
+	"goroutinePlayground/channels"
 )
 
 func main() {
 	fmt.Println("Goroutine examples")
+
+	// 11 Channels::ranging
+	channels.Ranging()
 
 	// 10: read from a closed channel
 	//channels.ReadFromClosed()
@@ -17,7 +20,7 @@ func main() {
 	// 8: netWorkDemon && pool usage to improve performance
 	//demon.StartNetworkDemon()
 	// 7.2 Pool
-	primitives.Pool()
+	//primitives.Pool()
 
 	// 7.1 Pool
 	//primitives.Pool2()
@@ -28,10 +31,10 @@ func main() {
 	// => fatal error: all goroutines are asleep - deadlock!
 
 	// 5: Once
-	primitives.Once()
+	//primitives.Once()
 
 	// 4. New Cond/Mutex
-	primitives.NCond()
+	//primitives.NCond()
 
 	// 3: Mutex and RWMutex - holds r/w level lock
 	//primitives.M()
