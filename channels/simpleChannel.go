@@ -1,4 +1,4 @@
-package main
+package channels
 
 import (
 	"fmt"
@@ -20,7 +20,7 @@ func typeof(v interface{}) string {
 	}
 }
 
-func simpleChannel() {
+func SimpleChannel() {
 	//var wg sync.WaitGroup
 	queue := make(chan interface{})
 	//wg.Add(1)

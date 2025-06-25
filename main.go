@@ -1,12 +1,18 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"goroutinePlayground/channels"
+)
 
 func main() {
 	fmt.Println("Goroutine examples")
 
+	// 10: read from a closed channel
+	channels.ReadFromClosed()
+
 	// 9: simple channel
-	simpleChannel()
+	//channels.SimpleChannel()
 
 	// 8: netWorkDemon && pool usage to improve performance
 
