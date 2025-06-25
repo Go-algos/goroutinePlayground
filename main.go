@@ -20,7 +20,7 @@ func main() {
 	//pool2()
 
 	// 7.1 Pool
-	//pool()
+	primitives.Pool2()
 
 	// 6. Deadlock
 	//primitives.Deadlock() // on the second attempt after import/refactor: compiles - but deadlock!!
@@ -28,7 +28,7 @@ func main() {
 	// => fatal error: all goroutines are asleep - deadlock!
 
 	// 5: Once
-	//once()
+	primitives.Once()
 
 	// 4. New Cond/Mutex
 	primitives.NCond()

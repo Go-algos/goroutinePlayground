@@ -1,4 +1,4 @@
-package main
+package primitives
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"sync"
 )
 
-func pool2() {
+func Pool2() {
 	var numCalcsCreated int
 	myPool := &sync.Pool{
 		New: func() interface{} {

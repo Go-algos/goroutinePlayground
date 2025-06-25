@@ -1,11 +1,11 @@
-package main
+package primitives
 
 import (
 	"fmt"
 	"sync"
 )
 
-func once() {
+func Once() {
 	var count int
 
 	increment := func() {
