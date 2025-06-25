@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"goroutinePlayground/demon"
 	"goroutinePlayground/primitives"
 )
 
@@ -16,7 +15,7 @@ func main() {
 	//channels.SimpleChannel()
 
 	// 8: netWorkDemon && pool usage to improve performance
-	demon.StartNetworkDemon()
+	//demon.StartNetworkDemon()
 	// 7.2 Pool
 	//pool2()
 
@@ -24,7 +23,7 @@ func main() {
 	//pool()
 
 	// 6. Deadlock
-	primitives.Deadlock() // on the second attempt after import/refactor: compiles - but deadlock!!
+	//primitives.Deadlock() // on the second attempt after import/refactor: compiles - but deadlock!!
 	// above will cause next error
 	// => fatal error: all goroutines are asleep - deadlock!
 
@@ -32,7 +31,7 @@ func main() {
 	//once()
 
 	// 4. New Cond/Mutex
-	//nCond()
+	primitives.NCond()
 
 	// 3: Mutex and RWMutex - holds r/w level lock
 	//primitives.M()

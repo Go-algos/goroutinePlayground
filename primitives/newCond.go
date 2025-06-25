@@ -1,4 +1,4 @@
-package main
+package primitives
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-func nCond() {
+func NCond() {
 	c := sync.NewCond(&sync.Mutex{})
 	queue := make([]interface{}, 0, 10)
 
