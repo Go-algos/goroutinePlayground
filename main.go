@@ -8,8 +8,11 @@ import (
 func main() {
 	fmt.Println("Goroutine examples")
 
+	// 12::Unblock multiple
+	channels.Multiple()
+
 	// 11 Channels::ranging
-	channels.Ranging()
+	//channels.Ranging()
 
 	// 10: read from a closed channel
 	//channels.ReadFromClosed()

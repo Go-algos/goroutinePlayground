@@ -22,7 +22,7 @@ func Ranging() {
 		}
 	}()
 
-	wg.Wait()
+	wg.Wait() // => awaiting goroutine to complete
 	fmt.Println("Unblocking ... \nRead from the stream")
 	for item := range intStream {
 		fmt.Printf("Read item: %d\n", item)
