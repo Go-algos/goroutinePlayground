@@ -17,10 +17,10 @@ func main() {
 	// 8: netWorkDemon && pool usage to improve performance
 	//demon.StartNetworkDemon()
 	// 7.2 Pool
-	//pool2()
+	primitives.Pool()
 
 	// 7.1 Pool
-	primitives.Pool2()
+	//primitives.Pool2()
 
 	// 6. Deadlock
 	//primitives.Deadlock() // on the second attempt after import/refactor: compiles - but deadlock!!

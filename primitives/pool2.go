@@ -1,4 +1,4 @@
-package main
+package primitives
 
 import (
 	"fmt"
@@ -10,7 +10,7 @@ type ArbitraryResource struct {
 	id string
 }
 
-func pool() {
+func Pool() {
 	myPool := sync.Pool{
 		New: func() interface{} {
 			instance := ArbitraryResource{id: uuid.NewString()}
