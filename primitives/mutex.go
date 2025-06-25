@@ -1,4 +1,4 @@
-package main
+package primitives
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 )
 
 // Mutext example
-func m() {
+func M() {
 
 	var count int
 	var lock sync.Mutex

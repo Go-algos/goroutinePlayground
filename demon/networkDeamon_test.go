@@ -1,13 +1,14 @@
-package main
+package demon
 
 import (
+	"goroutinePlayground"
 	"io"
 	"net"
 	"testing"
 )
 
 func init() {
-	deamonStarted := startNetworkDemon()
+	deamonStarted := main.startNetworkDemon()
 	deamonStarted.Wait()
 }
 

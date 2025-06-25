@@ -1,4 +1,4 @@
-package main
+package primitives
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"sync"
 )
 
-func iterate() {
+func Iterate() {
 	// Channels: https://go.dev/doc/effective_go#channels
 	// Create an unbuffered channel
 	c := make(chan string)

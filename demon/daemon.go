@@ -1,4 +1,4 @@
-package main
+package demon
 
 import (
 	"fmt"
@@ -24,7 +24,7 @@ func warmServiceConnCache() *sync.Pool {
 	return p
 }
 
-func startNetworkDemon() *sync.WaitGroup {
+func StartNetworkDemon() *sync.WaitGroup {
 	var wg sync.WaitGroup
 	wg.Add(1)
 

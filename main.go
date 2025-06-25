@@ -2,20 +2,20 @@ package main
 
 import (
 	"fmt"
-	"goroutinePlayground/channels"
+	"goroutinePlayground/demon"
 )
 
 func main() {
 	fmt.Println("Goroutine examples")
 
 	// 10: read from a closed channel
-	channels.ReadFromClosed()
+	//channels.ReadFromClosed()
 
 	// 9: simple channel
 	//channels.SimpleChannel()
 
 	// 8: netWorkDemon && pool usage to improve performance
-
+	demon.StartNetworkDemon()
 	// 7.2 Pool
 	//pool2()
 
@@ -34,12 +34,12 @@ func main() {
 	//nCond()
 
 	// 3: Mutex and RWMutex - holds r/w level lock
-	//m()
+	//primitives.M()
 
 	// 2: Select operator
-	//var res int = fibonacci()
+	//var res int = primitives.Fibonacci()
 	//fmt.Println(res)
 
 	// 1: Basic example
-	//iterate()
+	//primitives.Iterate()
 }

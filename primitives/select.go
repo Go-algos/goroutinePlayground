@@ -1,4 +1,4 @@
-package main
+package primitives
 
 // Ref: https://en.wikipedia.org/wiki/Fibonacci_sequence
 /*
@@ -19,7 +19,7 @@ func fibonacciAcc(c, quit chan int) int {
 	}
 }
 
-func fibonacci() int {
+func Fibonacci() int {
 	c := make(chan int)
 	quit := make(chan int)
 	go func() {
