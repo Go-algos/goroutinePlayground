@@ -8,7 +8,12 @@ import (
 func main() {
 	fmt.Println("Goroutine examples")
 
-	channels.BuffChanel()
+	// 14: Owned channel
+	channels.Owned()
+
+	// 13: A: Buffered channel
+	//channels.BuffChanel()
+
 	// 12::Unblock multiple
 	//channels.Multiple()
 
