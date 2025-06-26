@@ -8,8 +8,9 @@ import (
 func main() {
 	fmt.Println("Goroutine examples")
 
+	channels.BuffChanel()
 	// 12::Unblock multiple
-	channels.Multiple()
+	//channels.Multiple()
 
 	// 11 Channels::ranging
 	//channels.Ranging()
