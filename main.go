@@ -8,8 +8,9 @@ import (
 func main() {
 	fmt.Println("Goroutine examples")
 
+	channels.Start()
 	// 14: Owned channel
-	channels.Owned()
+	//channels.Owned()
 
 	// 13: A: Buffered channel
 	//channels.BuffChanel()
