@@ -8,7 +8,8 @@ import (
 func main() {
 	fmt.Println("Goroutine examples")
 
-	channels.Start()
+	channels.MultiChannel()
+	//channels.Start()
 	// 14: Owned channel
 	//channels.Owned()
 
