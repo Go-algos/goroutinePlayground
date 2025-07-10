@@ -2,13 +2,15 @@ package main
 
 import (
 	"fmt"
-	"goroutinePlayground/channels"
+	"goroutinePlayground/json"
 )
 
 func main() {
 	fmt.Println("Goroutine examples")
 
-	channels.ProgressRunner()
+	json.Runner()
+
+	//channels.ProgressRunner()
 
 	//channels.MultiChannel()
 	//channels.Start()
