@@ -6,6 +6,7 @@ import (
 )
 
 func MultiChannel() {
+	start := time.Now()
 	c1 := make(chan interface{})
 	//close(c1)
 	c2 := make(chan interface{})
@@ -18,8 +19,12 @@ func MultiChannel() {
 			c1Count++
 		case <-c2:
 			c2Count++
-		case <-time.After(time.Second):
-			fmt.Println("Timeout ...")
+		// Option 2: default
+		default:
+			fmt.Printf("In default %v\n\n\n", time.Since(start))
+			// Option 1 =>
+			//case <-time.After(time.Second):
+			//	fmt.Println("Timeout ...")
 		}
 	}
 
