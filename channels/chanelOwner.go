@@ -36,5 +36,6 @@ func RunOwner() {
 	}
 
 	results := chanOwner()
+	// results <- 5 This would fail as we have a read-only channel returned
 	consumer(results)
 }
