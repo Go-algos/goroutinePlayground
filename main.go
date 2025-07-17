@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
-	"goroutinePlayground/yaml"
+	"goroutinePlayground/channels"
 )
 
 func main() {
 	fmt.Println("Goroutine examples")
 
-	yaml.Runner()
+	channels.RunOwner()
+	// 15: yaml.Runner()
 	//json.Runner()
 
 	//channels.ProgressRunner()
