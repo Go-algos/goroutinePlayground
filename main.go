@@ -6,9 +6,10 @@ import (
 )
 
 func main() {
-	fmt.Println("Goroutine examples")
+	fmt.Println("Goroutine examples\n")
 
-	channels.RunOwner()
+	channels.Handy()
+	//channels.RunOwner()
 	// 15: yaml.Runner()
 	//json.Runner()
 
