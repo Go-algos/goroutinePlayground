@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
-	"goroutinePlayground/channels"
+	"goroutinePlayground/primitives"
 )
 
 func main() {
 	fmt.Println("Goroutine examples\n")
 
-	channels.Handy()
+	primitives.Race2()
+	//channels.Handy()
 	//channels.RunOwner()
 	// 15: yaml.Runner()
 	//json.Runner()
